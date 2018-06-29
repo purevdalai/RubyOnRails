@@ -63,3 +63,33 @@ Great! We created a new controller named Pages. How did we do this?
     1. Now that we have a controller, let's move on to the second part of the request/response cycle and create a route. Open config/routes.rb and underneath line 1,type: 
             get 'welcome' => 'pages#home'
 
+## Views
+Well done! Now when a user visits http://localhost:8000/welcome, the route
+    get 'welcome' => 'pages#home'
+will tell Rails to send this request to the Pages controller's home action.
+
+### Instructions
+    1. Now that we have a controller and a route, let's move on to the third part of the request/response cycle and create a view. Open app/views/pages/home.html.erb, and type in the following HTML. Fill in your own name.
+
+    <div class="main">
+        <div class="container">
+            <h1>Hello my name is Josh</h1>
+            <p>I make Rails apps.</p>
+        </div>
+    </div>
+
+    We've provided CSS in the file app/assets/stylesheets/pages.css.scss
+
+    2. View your app by visiting http://localhost:8000/welcome in the browser.
+
+## Generalizations
+Congratulations! You built a Rails app from scratch. What can we generalize so far?
+
+Using the request/response cycle as a guide, this has been our workflow when making a Rails app.
+
+    1. Generate a new Rails app.
+    2. Generate a controller and add an action.
+    3. Create a route that maps a URL to the controller action.
+    4. Create a view with HTML and CSS.
+    5. Run the local web server and preview the app in the browser.
+
