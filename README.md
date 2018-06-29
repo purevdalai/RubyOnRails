@@ -27,7 +27,7 @@ Nice work! In three commands, you built a working Rails app that displays the Ra
     3. The rails server command started the Rails development server so that we could preview the app in the browser by visiting http://localhost:8000. This development server is called WEBrick.
 
 ### Instructions
-The new Rails app contains a number of files and folders. Click Next to find out how they work together.
+1. The new Rails app contains a number of files and folders. Click Next to find out how they work together.
 
 ## Controller
 What happens when you visit http://localhost:8000 in the browser? Check out the diagram in the browser. [Read it](https://www.codecademy.com/articles/request-response-cycle-static)
@@ -46,8 +46,20 @@ This is called the request/response cycle. It's a useful way to see how a Rails 
             rails generate controller Pages
 
     2. After rails generate finishes running, in the Code Editor, open app/controllers/pages_controller.rb. Within the class PagesController, add a method home:
-        ```class PagesController < ApplicationController 
+       `class PagesController < ApplicationController 
             def home
             end
-        end```
+        end`
     
+## Routes
+Great! We created a new controller named Pages. How did we do this?
+
+    1. The rails generate controller Pages command generated a new controller named Pages. This created a file named app/controllers/pages_controller.rb.
+
+    2. Inside the new Pages controller, we added a method called home. Methods in Rails controllers are also referred to as controller actions, so here we added the home action to the Pages controller.
+
+### Instructions
+    
+    1. Now that we have a controller, let's move on to the second part of the request/response cycle and create a route. Open config/routes.rb and underneath line 1,type: 
+            get 'welcome' => 'pages#home'
+
