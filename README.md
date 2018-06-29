@@ -75,3 +75,27 @@ What did we just do?
         end
     
     
+## View
+Nice work. We added a controller and a route to the Rails app.
+
+Why does the Messages controller use an action named index? Check out the diagram in the browser. Rails provides seven standard controller actions for doing common operations with data. Here we want display a list of all messages, so we used the index action.
+
+Putting it all together:
+    
+    1. When a user visits http://localhost:8000/messages, the routes file maps this request to the Messages controller's index action.
+
+    2. The index action retrieves all messages from the database and stores them in variable @messages.
+
+The @messages variable is passed on to the view. The view should display each message, so let's set it up next. [Read it](https://www.codecademy.com/articles/standard-controller-actions)
+
+### Instructions
+    
+    1. Open app/views/messages/index.html.erb. Under line 11, type the contents as you see here:
+        <% @messages.each do |message| %> 
+            <div class="message"> 
+                <p class="content"><%= message.content %></p> 
+                <p class="time"><%= message.created_at %></p> 
+            </div> 
+        <% end %>
+
+    2. Visit http://localhost:8000/messages in the browser.
