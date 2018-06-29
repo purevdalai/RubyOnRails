@@ -19,3 +19,25 @@ However, a Rails app with static pages looks the same for all users. How can we 
     2. Install the gems in Gemfile.
     3. Run the local server to view the app at http://localhost:8000.
 
+
+## Model
+
+Great! You created a new Rails app named MessengerApp.
+
+Looking at the request/response cycle, we need four parts to build a Rails app - a model, a route, a controller, and a view.
+
+Let's start here by creating a model.
+
+### Instructions
+    1. In the terminal, generate a new model named Message :
+        rails generate model Message
+    
+    2. Open the migration file in db/migrate/ for the messages table. The name of the migration file starts with the timestamp of when it was created. Inside the change method, add this line as line 4:
+        t.text :content
+    
+    3. Then in the terminal, run:
+        rake db:migrate
+
+    4. Finally, run:
+        rake db:seed
+    
